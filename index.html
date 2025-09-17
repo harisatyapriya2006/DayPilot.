@@ -1,0 +1,46 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DayPilot — Login</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Identity Services -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <main class="page-center">
+    <div class="card login-card">
+      <div class="brand">
+        <div class="logo">🛩️</div>
+        <h1>DayPilot</h1>
+      </div>
+
+      <p class="sub">Light, playful planner — for daily wins 🚀</p>
+
+      <div class="form-col">
+        <input id="email" type="email" placeholder="Email" />
+        <input id="password" type="password" placeholder="Password" />
+        <button id="btnLogin">Login</button>
+      </div>
+
+      <div class="or">OR</div>
+
+      <!-- Paste your client id into data-client_id below (replace REPLACE_WITH_GOOGLE_CLIENT_ID) -->
+      <div id="g_id_onload"
+           data-client_id="REPLACE_WITH_GOOGLE_CLIENT_ID"
+           data-callback="handleCredentialResponse">
+      </div>
+      <div id="g_button"></div>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

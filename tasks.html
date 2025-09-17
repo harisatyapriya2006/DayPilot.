@@ -1,0 +1,72 @@
+<!-- tasks.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DayPilot — Tasks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand small">
+      <div class="logo">🛩️</div>
+      <div>
+        <div class="appname">DayPilot</div>
+        <div class="smaller">plan • fly • finish</div>
+      </div>
+    </div>
+
+    <div class="right-info">
+      <div class="streak-badge">🔥 <span id="streakNum">0</span></div>
+      <button id="btnLogout" class="ghost">Logout</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panels">
+      <!-- Daily -->
+      <div class="panel">
+        <div class="panel-head">
+          <h3>🌞 Daily</h3>
+          <div class="small-hint">small daily wins</div>
+        </div>
+        <div class="add-row">
+          <input id="daily-input" placeholder="Add daily task..." />
+          <button id="add-daily">Add</button>
+        </div>
+        <ul id="daily-list" class="task-list"></ul>
+      </div>
+
+      <!-- Weekly -->
+      <div class="panel">
+        <div class="panel-head">
+          <h3>🗓 Weekly</h3>
+          <div class="small-hint">once per week</div>
+        </div>
+        <div class="add-row">
+          <input id="weekly-input" placeholder="Add weekly task..." />
+          <button id="add-weekly">Add</button>
+        </div>
+        <ul id="weekly-list" class="task-list"></ul>
+      </div>
+
+      <!-- Important -->
+      <div class="panel">
+        <div class="panel-head">
+          <h3>⭐ Important</h3>
+          <div class="small-hint">high priority</div>
+        </div>
+        <div class="add-row">
+          <input id="important-input" placeholder="Add important task..." />
+          <button id="add-important">Add</button>
+        </div>
+        <ul id="important-list" class="task-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="tasks.js"></script>
+</body>
+</html>
